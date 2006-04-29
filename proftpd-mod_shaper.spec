@@ -10,6 +10,7 @@ Source0:	http://www.castaglia.org/proftpd/modules/proftpd-mod-shaper-%{version}.
 URL:		http://www.castaglia.org/proftpd/modules/mod_shaper.html
 BuildRequires:	proftpd-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
+Requires(post,postun):	grep
 Requires:	proftpd >= 1:1.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,12 +41,10 @@ echo 'LoadModule        %{mod_name}.c' > $RPM_BUILD_ROOT%{_sysconfdir}/conf.d/%{
 rm -rf $RPM_BUILD_ROOT
 
 %post
-if [ "$1" = "1" ]; then
-	if grep -iEqs "^ServerType[[:space:]]+inetd" %{_sysconfdir}/proftpd.conf; then
-		%service -q rc-inetd reload
-	elif grep -iEqs "^ServerType[[:space:]]+standalone" %{_sysconfdir}/proftpd.conf; then
-		%service -q proftpd restart
-	fi
+if grep -iEqs "^ServerType[[:space:]]+inetd" %{_sysconfdir}/proftpd.conf; then
+	%service -q rc-inetd reload
+elif grep -iEqs "^ServerType[[:space:]]+standalone" %{_sysconfdir}/proftpd.conf; then
+	%service -q proftpd restart
 fi
 
 %postun
