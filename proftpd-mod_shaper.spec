@@ -1,5 +1,6 @@
 %define		mod_name	mod_shaper
-Summary:	PROfessional FTP Daemon with apache-like configuration syntax
+Summary:	mod_shaper module for proftpd
+Summary(pl):	Modu³ mod_shaper dla proftpd
 Name:		proftpd-%{mod_name}
 Version:	0.5.6
 Release:	0.1
@@ -24,6 +25,14 @@ clients, shaping each session to use only a portion of the overall
 rate. mod_shaper shapes both transmitted traffic, e.g. bits being
 downloaded via the RETR command, and received traffic, e.g. bits being
 uploaded via the APPE, STOR, and STOU commands.
+
+%description -l pl
+Modu³ mod_shaper s³u¿y do dzielenia ³±cznych prêdko¶ci przesy³ania
+danych, zarówno przy ¶ci±ganiu jak i wysy³aniu, dla demona proftpd
+pomiêdzy wszystkich pod³±czonych klientów FTP, ograniczaj±c ka¿d±
+sesjê, aby u¿ywa³a tylko czê¶ci pasma. mod_shaper ogranicza zarówno
+ruch wysy³any, czyli bity ¶ci±gane poleceniem RETR, jak i ruch
+odbierany, czyli bity pobierane poleceniami APPE, STOR i STOU.
 
 %prep
 %setup -q -n %{mod_name}
