@@ -1,6 +1,6 @@
 %define		mod_name	mod_shaper
 Summary:	mod_shaper module for proftpd
-Summary(pl):	Modu³ mod_shaper dla proftpd
+Summary(pl.UTF-8):   ModuÅ‚ mod_shaper dla proftpd
 Name:		proftpd-%{mod_name}
 Version:	0.5.6
 Release:	0.1
@@ -26,12 +26,12 @@ rate. mod_shaper shapes both transmitted traffic, e.g. bits being
 downloaded via the RETR command, and received traffic, e.g. bits being
 uploaded via the APPE, STOR, and STOU commands.
 
-%description -l pl
-Modu³ mod_shaper s³u¿y do dzielenia ³±cznych prêdko¶ci przesy³ania
-danych, zarówno przy ¶ci±ganiu jak i wysy³aniu, dla demona proftpd
-pomiêdzy wszystkich pod³±czonych klientów FTP, ograniczaj±c ka¿d±
-sesjê, aby u¿ywa³a tylko czê¶ci pasma. mod_shaper ogranicza zarówno
-ruch wysy³any, czyli bity ¶ci±gane poleceniem RETR, jak i ruch
+%description -l pl.UTF-8
+ModuÅ‚ mod_shaper sÅ‚uÅ¼y do dzielenia Å‚Ä…cznych prÄ™dkoÅ›ci przesyÅ‚ania
+danych, zarÃ³wno przy Å›ciÄ…ganiu jak i wysyÅ‚aniu, dla demona proftpd
+pomiÄ™dzy wszystkich podÅ‚Ä…czonych klientÃ³w FTP, ograniczajÄ…c kaÅ¼dÄ…
+sesjÄ™, aby uÅ¼ywaÅ‚a tylko czÄ™Å›ci pasma. mod_shaper ogranicza zarÃ³wno
+ruch wysyÅ‚any, czyli bity Å›ciÄ…gane poleceniem RETR, jak i ruch
 odbierany, czyli bity pobierane poleceniami APPE, STOR i STOU.
 
 %prep
