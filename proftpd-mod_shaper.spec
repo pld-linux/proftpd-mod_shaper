@@ -1,6 +1,6 @@
 %define		mod_name	mod_shaper
 Summary:	mod_shaper module for proftpd
-Summary(pl.UTF-8):   Moduł mod_shaper dla proftpd
+Summary(pl.UTF-8):	Moduł mod_shaper dla proftpd
 Name:		proftpd-%{mod_name}
 Version:	0.5.6
 Release:	0.1
