@@ -2,12 +2,12 @@
 Summary:	mod_shaper module for proftpd
 Summary(pl.UTF-8):	Moduł mod_shaper dla proftpd
 Name:		proftpd-%{mod_name}
-Version:	0.5.6
-Release:	0.1
+Version:	0.6.3
+Release:	1
 License:	GPL v2+
 Group:		Daemons
 Source0:	http://www.castaglia.org/proftpd/modules/proftpd-mod-shaper-%{version}.tar.gz
-# Source0-md5:	a81c3ed2d45f7c938416a970fd559703
+# Source0-md5:	abe5e8b28241f03e1aa648654201d840
 URL:		http://www.castaglia.org/proftpd/modules/mod_shaper.html
 BuildRequires:	proftpd-devel
 BuildRequires:	rpmbuild(macros) >= 1.268
