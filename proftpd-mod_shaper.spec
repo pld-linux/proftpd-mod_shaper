@@ -3,7 +3,7 @@ Summary:	mod_shaper module for proftpd
 Summary(pl.UTF-8):	Moduł mod_shaper dla proftpd
 Name:		proftpd-%{mod_name}
 Version:	0.6.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Daemons
 Source0:	http://www.castaglia.org/proftpd/modules/proftpd-mod-shaper-%{version}.tar.gz
@@ -38,7 +38,7 @@ odbierany, czyli bity pobierane poleceniami APPE, STOR i STOU.
 %setup -q -n %{mod_name}
 
 %build
-%{__cc} %{rpmcflags} -I/usr/include/proftpd %{mod_name}.c -shared -o %{mod_name}.so
+%{__cc} %{rpmcflags} -fPIC -I/usr/include/proftpd %{mod_name}.c -shared -o %{mod_name}.so
 
 %install
 rm -rf $RPM_BUILD_ROOT
